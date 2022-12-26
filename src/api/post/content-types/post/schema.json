@@ -38,6 +38,23 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "excerpt": {
+      "type": "text",
+      "required": true,
+      "maxLength": 250
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "inversedBy": "posts"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "inversedBy": "tags"
     }
   }
 }
