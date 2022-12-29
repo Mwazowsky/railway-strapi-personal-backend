@@ -15,6 +15,12 @@
       "type": "string",
       "unique": true,
       "maxLength": 20
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "mappedBy": "tag"
     }
   }
 }

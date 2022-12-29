@@ -44,17 +44,11 @@
       "required": true,
       "maxLength": 250
     },
-    "tags": {
+    "tag": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::post.post",
+      "target": "api::tag.tag",
       "inversedBy": "posts"
-    },
-    "posts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::post.post",
-      "inversedBy": "tags"
     }
   }
 }
